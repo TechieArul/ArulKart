@@ -181,7 +181,7 @@ export const Profile_dp = (props) => {
           accept="image/jpeg, image/jpg, image/png"
           onChange={(event)=>{change_profile_picture(event)}}
         />
-
+      {loading(false)}
     </>
   )
 }
