@@ -33,7 +33,7 @@ const order_router = require("./routers/order_routes")
         app.use(bp.urlencoded({extended: true}))
 
         // allow third party api calls and cookies
-        app.use(cors({origin : process.env.FRONTEND_URL, credentials : true}))
+        app.use(cors({origin : true, credentials : true}))
         
 
     // connect database
