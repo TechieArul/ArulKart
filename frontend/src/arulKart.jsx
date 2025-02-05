@@ -104,7 +104,7 @@ export const ArulKart = () => {
         }
 
       }
-      //loading(false)
+      loading(false)
     };
 
     fetchProfile();
