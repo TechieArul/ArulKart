@@ -62,7 +62,7 @@ export const Sell_product_add = (props) => {
       const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/add_product`, add_product_datas, {withCredentials : true})
 
       message_window(res.data.message, "good")
-      // save_sell_products_datas("sell_new_product_button", "sell_new_product_button")
+      save_sell_products_datas("sell_new_product_button", "sell_new_product_button")
       save_sell_products_datas("fetch_sell_product", Date.now())
 
   }catch(err){
