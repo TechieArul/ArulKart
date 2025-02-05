@@ -104,7 +104,7 @@ export const ArulKart = () => {
         }
 
       }
-      loading(false)
+      window.location.pathname !== "/" && loading(false)
     };
 
     fetchProfile();
