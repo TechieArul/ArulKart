@@ -11,7 +11,6 @@ exports.send_session_key = async (user, status_code, res)=>{
         httpOnly: true,
         secure: true,
         sameSite: "None",
-        domain: "https://arulkart-backend.onrender.com",
         expires: new Date(Date.now() + process.env.COOKIE_EXPIRES_TIME * 24 * 60 * 60 * 1000),
     }
 
