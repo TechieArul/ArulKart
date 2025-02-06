@@ -33,7 +33,7 @@ const order_router = require("./routers/order_routes")
         app.use(bp.urlencoded({extended: true}))
 
         // allow third party api calls and cookies
-        app.use(cors({origin : true, credentials : true}))
+        app.use(cors({origin : "https://arulkart.onrender.com", methods: ["GET", "POST", "PUT", "PATCH", "DELETE"], credentials : true}))
         
 
     // connect database
