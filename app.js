@@ -56,7 +56,7 @@ const order_router = require("./routers/order_routes")
         app.use(express.static(path.join(__dirname, "build")))
         app.get("*", (req, res)=>{
             console.log("LOG --> SERVER INDEX.HTML")
-            res.sendFile(path.resolve(__dirname, "index.html"))
+            res.sendFile(path.resolve(__dirname, "build", "index.html"))
         })
     }
 
