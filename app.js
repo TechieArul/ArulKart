@@ -55,6 +55,7 @@ const order_router = require("./routers/order_routes")
     if(process.env.NODE_ENV === "production"){
         app.use(express.static(path.join(__dirname, "build")))
         app.get("*", (req, res)=>{
+            console.log("LOG --> SERVER INDEX.HTML")
             res.sendFile(path.resolve(__dirname, "index.html"))
         })
     }
