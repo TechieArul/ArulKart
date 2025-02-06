@@ -18,8 +18,8 @@ exports.send_session_key = async (user, status_code, res)=>{
     user.password = undefined
 
     // semd cookie and response
-    res.status(status_code)
-        .cookie("arul_kart", session_key, options)
+    res.cookie("arul_kart", session_key, options)
+        .status(status_code)
         .json({
             success : true,
             user : encrypt(user)
