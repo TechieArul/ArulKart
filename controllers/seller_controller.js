@@ -46,6 +46,11 @@ exports.add_product = catch_async_error(async(req, res, next)=>{
         return next(new error_handler("please enter required fields !", 401))
       }
 
+      // max char
+      if(product_name.length > 55 || product_des.length > 55){
+        return next(new error_handler("characters cannot exceed 50 !", 401))
+      }
+
       // create new product
       var product = await product_database.create({name : product_name, prize : product_prize, description : product_des, category : product_category, stock : product_stock, seller : seller.id, image : req.image_url})
 
@@ -108,6 +113,11 @@ exports.edit_product = catch_async_error(async(req, res, next)=>{
       // if reqired fields is not filled
       if (!product_name || !product_des || !product_prize || !product_category || !product_stock){
           return next(new error_handler("please enter required fields !", 401))
+      }
+
+      // max char
+      if(product_name.length > 55 || product_des.length > 55){
+        return next(new error_handler("characters cannot exceed 50 !", 401))
       }
 
       // edit product
