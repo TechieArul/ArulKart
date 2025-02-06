@@ -5,6 +5,7 @@ exports.send_session_key = async (user, status_code, res)=>{
 
     console.log("LOG --> SEND SESSION ID / COOKIE")
     const session_key = user.generate_session_key()
+    console.log(session_key)
 
     // setting cookies
     const options = {
